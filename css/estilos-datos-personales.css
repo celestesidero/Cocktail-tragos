@@ -1,0 +1,193 @@
+﻿/* estilos-datos-personales.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@400;600&family=Numans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #c9c1e0; 
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-contenedor {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 800px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.titulo-seccion {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.ruta-navegacion {
+    font-size: 1em;
+    color: #6c757d; 
+}
+
+.ruta-navegacion .separator {
+    margin: 0 5px;
+}
+
+.separador {
+    border: 0;
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 20px 0;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo {
+    flex: 1 1 100%; 
+}
+
+.formulario-dos-columnas .campo {
+    flex: 1 1 calc(50% - 10px); 
+}
+
+.formulario-dos-columnas .campo-triple {
+    flex: 1 1 calc(33.33% - 14px); 
+    position: relative; 
+}
+
+.campo label {
+    font-size: 1em;
+    color: #424950;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px; 
+    background-color: #f8f9fa; 
+}
+
+.campo input[readonly] {
+    background-color: #e9ecef;
+}
+
+.contrasena-contenedor {
+    margin-bottom: 20px;
+}
+
+.contrasena-input-grupo {
+    display: flex;
+    gap: 10px;
+}
+
+.contrasena-input-grupo input[type="password"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+
+.boton-guardar {
+    background-color: #7a69ac;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.boton-cambiar {
+    background: none;
+    color: #7a69ac;
+    border: 1px solid #7a69ac;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.boton-cambiar:hover {
+    background-color: #7a69ac;
+    color: white;
+}
+
+@media (max-width: 720px) and (min-width: 480px){
+    .perfil-contenedor{
+        padding: 22px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .titulo-seccion{
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+
+    .formulario .campo,
+    .formulario-dos-columnas .campo,
+    .formulario-dos-columnas .campo-triple {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .campo input{
+        height: 48px;
+        font-size: 15px;
+        padding: 0 14px;
+    }
+
+    .boton-guardar{
+        height: 48px;
+        font-size: 15px;
+        border-radius: 24px;
+        width: 100%;
+    }
+
+    .contrasena-input-grupo{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 360px){
+  .perfil-contenedor{
+    padding: 18px;    
+  }
+
+  .titulo-seccion{
+    font-size: 20px;    
+  }
+
+  .campo input{
+    font-size: 14.5px;   
+    height: 44px;      
+    padding: 0 12px;
+  }
+
+  .boton-guardar{
+    font-size: 14.5px; 
+    height: 44px;       
+  }
+
+  .texto-terminos{
+    font-size: 10.5px;  
+  }
+}

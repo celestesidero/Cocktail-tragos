@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="../css/estilos-datos-personales.css">
+</head>
+<body>
+
+    <div class="perfil-contenedor">
+
+        <section class="ruta-navegacion">
+            <span>Mi cuenta</span>
+            <span class="separator">•</span>
+            <span>Mi usuario</span>
+        </section>
+
+        <section class="seccion">
+            <h2 class="titulo-seccion">Mi usuario</h2>
+
+            <form class="formulario">
+                <section class="campo">
+                    <label for="email-principal">Email principal</label>
+                    <input type="email" id="email-principal" value="joseluis@gmail.com" readonly>
+                </section>
+                <button type="submit" class="boton-guardar">GUARDAR CAMBIOS</button>
+            </form>
+
+            <div class="separador"></div>
+
+            <section class="contrasena-contenedor">
+                <label for="contrasena">Contraseña</label>
+                <div class="contrasena-input-grupo">
+                    <input type="password" id="contrasena" value="•••••••••••••" readonly>
+                    <button type="button" class="boton-cambiar">CAMBIAR</button>
+                </div>
+            </section>
+        </section>
+
+        <nav class="ruta-navegacion">
+            <span>Mi cuenta</span>
+            <span class="separator">•</span>
+            <span>Datos Personales</span>
+        </nav>
+
+        <section class="seccion">
+            <h2 class="titulo-seccion">Datos personales</h2>
+
+            <form class="formulario formulario-dos-columnas">
+                
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido">
+                </div>
+
+                <div class="campo campo-triple">
+                    <label for="tipo-doc">Tipo</label>
+                    <input type="text" id="tipo-doc">
+                </div>
+                <div class="campo campo-triple">
+                    <label for="numero-doc">Número de documento</label>
+                    <input type="text" id="numero-doc">
+                </div>
+                <div class="campo campo-triple">
+                    <label for="fecha-nac">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nac">
+                </div>
+                
+                <div class="campo">
+                    <label for="telefono">Teléfono celular</label>
+                    <input type="tel" id="telefono">
+                </div>
+                <div class="campo">
+                    <label for="email-secundario">Email secundario</label>
+                    <input type="email" id="email-secundario">
+                </div>
+
+                <div>
+                    <button type="submit" class="boton-guardar">GUARDAR CAMBIOS</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
