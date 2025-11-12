@@ -13,21 +13,21 @@
         <h1> Iniciar sesión </h1>
       </header>
 
-      <form action="#" method="post" class="formulario-login" >
+      <form action="#" method="post" class="formulario-login" id="formulario-login" name="formulario-login">
         <section class="caja-entrada">
-          <input type="email" name="email" class="campo-entrada" placeholder="Email*" autocomplete="off" required>
+          <input type="email" id="email" name="email" class="campo-entrada" placeholder="Email*" autocomplete="off" required>
         </section>
 
         <section class="caja-entrada">
-          <input type="password" name="password" class="campo-entrada" placeholder="Contraseña*" autocomplete="off" required>
+          <input type="password" id="contrasenia" name="contrasenia" class="campo-entrada" placeholder="Contraseña*" autocomplete="off" required>
         </section>
 
         <section class="recuperar-contrasenia">
-          <a class="enlace-recuperar-contrasenia" href="recuperar-password.html">¿Olvidaste la contraseña?</a>
+          <a class="enlace-recuperar-contrasenia" href="recuperar-password.html" id="recuperar-contrasenia" name="recuperar-contrasenia">¿Olvidaste la contraseña?</a>
         </section>
 
-        <section class="caja-boton">
-          <a href="../index.html" class="boton-enviar"> Iniciar sesión </a>
+       <section class="caja-boton">
+          <button type="submit" class="boton-enviar" id="boton-enviar" name="boton-enviar" disabled >Iniciar sesión</button>
         </section>
 
         <section class="enlace-registro">
@@ -46,5 +46,6 @@
       </section>
     </section>
   </div>
+  <script src="../js/login.js"></script>
 </body>
 </html>
