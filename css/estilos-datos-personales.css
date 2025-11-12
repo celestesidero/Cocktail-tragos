@@ -1,4 +1,3 @@
-﻿/* estilos-datos-personales.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat:wght@400;600&family=Numans&display=swap');
 
 *{
@@ -74,7 +73,8 @@ body {
 .campo input[type="text"],
 .campo input[type="email"],
 .campo input[type="tel"],
-.campo input[type="date"] {
+.campo input[type="date"], 
+.campo select{
     width: 100%;
     padding: 10px;
     border: 1px solid #ced4da;
