@@ -15,17 +15,17 @@
       </header>
 
       <main>
-        <form action="#" method="post" class="login-form" >
+        <form action="#" method="post" class="login-form" id="formulario-registrarse" name="formulario-registrarse">
           <section class="caja-entrada">
-            <input type="email" name="email" class="campo-entrada" placeholder="Email*" autocomplete="off" required>
+            <input type="email" name="email" id="email" class="campo-entrada" placeholder="Email*" autocomplete="off" required>
           </section>
 
           <section class="caja-entrada">
-              <input type="password" name="password" class="campo-entrada" placeholder="Contraseña*" autocomplete="off" required>
+              <input type="password" name="contrasenia" id="contrasenia" class="campo-entrada" placeholder="Contraseña*" autocomplete="off" required>
           </section>
 
-          <section class="caja-boton">
-            <button type="submit" class="boton-enviar">REGISTRATE</button>
+         <section class="caja-boton">
+            <button type="submit" class="boton-enviar" id="boton-enviar" name="boton-enviar" disabled>REGISTRATE</button>
           </section>
 
           <section class="enlace-registro">
@@ -46,5 +46,6 @@
 
     </section>
   </div>
+  <script src="../js/registrarse.js"></script>
 </body>
 </html>
