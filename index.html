@@ -8,23 +8,42 @@
 
    <link rel="stylesheet" href="css/temas-colores-fuentes.css">
    <link rel="stylesheet" href="css/estilos-principal.css">
+   <link rel="icon" href="./assets/img/logo.png">
+
+   <!--imporata los estilos de la libreria-->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <body class="light-theme">
 
    <header id="encabezado-principal">
       <img class="header__logo" src="./assets/img/logo.png" alt="Logo">
-      <input id="buscador" class="item-buscador" type="text" name="buscador-categoria" placeholder="Buscar por categoria">
-     <div>
-      <a href="./html/datos-personales.html">
-         <img class="header__usuario" src="./assets/img/usuario.png" alt="Perfil de usuario">
-      </a>
-      <img  class="header__favorito" src="./assets/img/corazon.png" alt="Favoritos">
+      <input id="buscador" class="item-buscador" type="text" name="buscador-categoria"
+         placeholder="Buscar por categoria">
+      <div>
+         <a href="./html/datos-personales.html">
+            <img class="header__usuario" src="./assets/img/usuario.png" alt="Perfil de usuario">
+         </a>
+         <img class="header__favorito" src="./assets/img/corazon.png" alt="Favoritos">
       </div>
    </header>
 
-   <header id="encabezado-secundario">
-      <h2> ENCABEZADO SECUNDARIO --- CARRUSEL </h2>
+   <header id="encabezado-secundario" class="carrusel">
+      <img
+         src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhZ29zfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000"
+         alt="Espresso Nocturno" class="carrusel-img">
+      <img
+         src="https://static.vecteezy.com/system/resources/thumbnails/027/717/346/small/whiskey-alcohol-drink-with-ice-in-a-glass-generative-ai-photo.jpg"
+         alt="Kiwi Mint" class="carrusel-img">
+      <img
+         src="https://img.freepik.com/foto-gratis/bebida-helada-copa-vista-frontal_23-2148340059.jpg?semt=ais_hybrid&w=740&q=80"
+         alt="Limonada" class="carrusel-img">
+      <img
+         src="https://st2.depositphotos.com/4158301/8008/i/450/depositphotos_80087818-stock-photo-five-shots-glasses-full-of.jpg"
+         alt="Sunset Detox" class="carrusel-img">
    </header>
 
    <main>
@@ -476,8 +495,8 @@
    </main>
 
    <footer id="footer-principal">
-      <div id="footer-principal-izquierda">  
-         Politica de privacidad 
+      <div id="footer-principal-izquierda">
+         Politica de privacidad
          <br>
          <br>
          Terminos y condiciones
@@ -486,14 +505,15 @@
          SEGUINOS
          <br>
          <br>
-         <img  class="footer__img" src="./assets/img/instagram (1).png" alt="Instagram">
-         <img  class="footer__img" src="./assets/img/gorjeo.png" alt="X">
-         <img  class="footer__img" src="./assets/img/facebook.png" alt="facebook">
-         
+         <img class="footer__img" src="./assets/img/instagram (1).png" alt="Instagram">
+         <img class="footer__img" src="./assets/img/gorjeo.png" alt="X">
+         <img class="footer__img" src="./assets/img/facebook.png" alt="facebook">
+
          <form class="footer__form" action="" method="get">
             <label for="email"> SUSCRIBIRSE A COKTAIL </label>
-            <input class="footer__form--item" id="email" type="email" placeholder="ejemplo@gmail.com" name="email-suscribirse">
-            <button class="footer__form--button" > Suscribirse </button>
+            <input class="footer__form--item" id="email" type="email" placeholder="ejemplo@gmail.com"
+               name="email-suscribirse">
+            <button class="footer__form--button"> Suscribirse </button>
          </form>
       </div>
       <div id="footer-principal-derecha">
@@ -503,6 +523,10 @@
          Contactanos
       </div>
    </footer>
+
+   <!--libreria para el carrusel-->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="js/cargar-datos.js"></script>

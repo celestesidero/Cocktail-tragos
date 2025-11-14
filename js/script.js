@@ -1,4 +1,3 @@
-
 const items = document.querySelectorAll(".articulo-categoria")
 const buscador = document.getElementById("buscador")
 const categorias = document.querySelectorAll(".tab-categoria")
@@ -8,6 +7,19 @@ quitarEfectoMouse()
 efectoAlHacerClick()
 buscar()
 seleccionaCategoria()
+
+$(document).ready(carrusel())
+
+function carrusel() {
+       $(".carrusel").slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              arrows: false,
+              dots: true,
+              autoplay: false
+       })
+}
 
 function seleccionaCategoria() {
        categorias.forEach(item => {
