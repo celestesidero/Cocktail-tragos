@@ -1,14 +1,7 @@
 const items = document.querySelectorAll(".articulo-categoria")
 const buscador = document.getElementById("buscador")
 const categorias = document.querySelectorAll(".tab-categoria")
-
-efectoAlPasarElMouse()
-quitarEfectoMouse()
-efectoAlHacerClick()
-buscar()
-seleccionaCategoria()
-
-$(document).ready(carrusel())
+const rating = document.querySelectorAll(".item-valor-rating")
 
 function carrusel() {
        $(".carrusel").slick({
@@ -18,6 +11,13 @@ function carrusel() {
               arrows: false,
               dots: true,
               autoplay: false
+       })
+}
+
+function agregaRating() {
+       rating.forEach(item => {
+              const valor = parseInt(item.textContent)
+              item.innerHTML = "★★★★★☆☆☆☆☆".slice(5 - valor, 10 - valor)
        })
 }
 
@@ -75,3 +75,11 @@ function efectoAlPasarElMouse() {
        })
 }
 
+efectoAlPasarElMouse()
+quitarEfectoMouse()
+efectoAlHacerClick()
+buscar()
+seleccionaCategoria()
+agregaRating()
+
+$(document).ready(carrusel())
