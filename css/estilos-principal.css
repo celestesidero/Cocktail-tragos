@@ -166,6 +166,16 @@
     transition: 0.3s;
  }
 
+ .estrella {
+   font-size: 20px;
+   color: #bbb;
+ }
+
+ .estrella-pintada {
+   font-size: 20px;
+   color: gold;
+ }
+
  /*footer*/
  #footer-principal {
     display: flex;

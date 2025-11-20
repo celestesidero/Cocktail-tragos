@@ -1,23 +1,43 @@
 const items = document.querySelectorAll(".articulo-categoria")
 const buscador = document.getElementById("buscador")
 const categorias = document.querySelectorAll(".tab-categoria")
-const rating = document.querySelectorAll(".item-valor-rating")
+const ratings = document.querySelectorAll(".item-valor-rating")
 
 function carrusel() {
        $(".carrusel").slick({
               slidesToShow: 1,
               slidesToScroll: 1,
-              infinite: false,
+              infinite: true,
               arrows: false,
               dots: true,
-              autoplay: false
+              autoplay: true
        })
 }
 
-function agregaRating() {
-       rating.forEach(item => {
+function generaRating() {
+       
+       ratings.forEach(item => {
               const valor = parseInt(item.textContent)
-              item.innerHTML = "★★★★★☆☆☆☆☆".slice(5 - valor, 10 - valor)
+              item.innerHTML = ""
+
+              const contenedor = document.createElement("div")
+
+              /* logica para crear las estrellas */
+              for (let index = 1; index <= 5; index++) {
+                     const estrella = document.createElement("i")
+
+                     estrella.classList.add("bi", "bi-star-fill")
+
+                     /* logica para pintar las estrellas */
+                     if (index <= valor)
+                            estrella.classList.add("estrella-pintada")
+                     else
+                            estrella.classList.add("estrella")
+
+                     contenedor.appendChild(estrella)
+
+              }
+              item.appendChild(contenedor)
        })
 }
 
@@ -75,11 +95,33 @@ function efectoAlPasarElMouse() {
        })
 }
 
+function inicializarRating() {
+    generaRating()
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', generaRating)
+    }
+    
+    window.addEventListener('load', generaRating)
+    
+    setTimeout(generaRating, 300)
+    
+    window.addEventListener('popstate', generaRating)
+    
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            setTimeout(generaRating, 100)
+        }
+    })
+}
+
 efectoAlPasarElMouse()
 quitarEfectoMouse()
 efectoAlHacerClick()
 buscar()
 seleccionaCategoria()
-agregaRating()
+generaRating()
+inicializarRating()
+window.generaRating = generaRating
 
 $(document).ready(carrusel())

@@ -21,7 +21,7 @@ linksCategorias.forEach((linkCategoria) => {
          articuloContenedor.getElementsByClassName("item-valor-rating")[0].innerText = Rating;
 
          const personalizados = Object.keys(item).filter(key => key.startsWith("personalizado_"));
-         
+
          personalizados.forEach((personalizado, index) => {
             articuloContenedor.getElementsByClassName(`item-campo-personalizado_${index + 1}`)[0].innerText = personalizado.split(".")[1];
             articuloContenedor.getElementsByClassName(`item-valor-personalizado_${index + 1}`)[0].innerText = item[personalizado];
