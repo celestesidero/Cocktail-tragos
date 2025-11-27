@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -22,9 +22,9 @@
             <form class="formulario">
                 <section class="campo">
                     <label for="email-principal">Email principal</label>
-                    <input type="email" id="email-principal" value="joseluis@gmail.com" readonly>
+                    <input type="email" id="email-principal" name="email-principal" value="joseluis@gmail.com">
                 </section>
-                <button type="submit" class="boton-guardar">GUARDAR CAMBIOS</button>
+                <button type="button" class="boton-guardar" id="boton-guardar-email" disabled >GUARDAR CAMBIOS</button>
             </form>
 
             <div class="separador"></div>
@@ -32,8 +32,8 @@
             <section class="contrasena-contenedor">
                 <label for="contrasena">Contraseña</label>
                 <div class="contrasena-input-grupo">
-                    <input type="password" id="contrasena" value="•••••••••••••" readonly>
-                    <button type="button" class="boton-cambiar">CAMBIAR</button>
+                    <input type="password" id="contrasena" name="contrasena" value="•••••••••" readonly>
+                    <button type="button" class="boton-cambiar" id="boton-cambiar">CAMBIAR</button>
                 </div>
             </section>
         </section>
@@ -47,46 +47,53 @@
         <section class="seccion">
             <h2 class="titulo-seccion">Datos personales</h2>
 
-            <form class="formulario formulario-dos-columnas">
+            <form class="formulario formulario-dos-columnas" id="form-datos-personales">
                 
                 <div class="campo">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre">
+                    <input type="text" id="nombre" name="nombre">
                 </div>
                 <div class="campo">
                     <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido">
+                    <input type="text" id="apellido" name="apellido">
+                </div>
+
+               <div class="campo campo-triple">
+                    <label for="tipo-doc">Tipo</label >
+                     <select id="tipo-doc" name="tipo-doc" >
+                        <option value="">Seleccione...</option>
+                        <option value="DNI">DNI</option>
+                        <option value="CI">CI</option>
+                        <option value="PASAPORTE">PASAPORTE</option>
+                    </select>
                 </div>
 
                 <div class="campo campo-triple">
-                    <label for="tipo-doc">Tipo</label>
-                    <input type="text" id="tipo-doc">
-                </div>
-                <div class="campo campo-triple">
                     <label for="numero-doc">Número de documento</label>
-                    <input type="text" id="numero-doc">
+                    <input type="text" id="numero-doc" name="numero-doc">
                 </div>
                 <div class="campo campo-triple">
                     <label for="fecha-nac">Fecha de nacimiento</label>
-                    <input type="date" id="fecha-nac">
+                    <input type="date" id="fecha-nac" name="fecha-nac">
                 </div>
                 
                 <div class="campo">
                     <label for="telefono">Teléfono celular</label>
-                    <input type="tel" id="telefono">
+                    <input type="tel" id="telefono" name="telefono" >
                 </div>
                 <div class="campo">
                     <label for="email-secundario">Email secundario</label>
-                    <input type="email" id="email-secundario">
+                    <input type="email" id="email-secundario" name="email-secundario">
                 </div>
 
                 <div>
-                    <button type="submit" class="boton-guardar">GUARDAR CAMBIOS</button>
+                    <button type="submit" class="boton-guardar" id="boton-guardar" name="boton-guardar">GUARDAR CAMBIOS</button>
                 </div>
             </form>
         </section>
 
     </div>
+<script src="../js/datos-personales.js"></script>
 
 </body>
 </html>
