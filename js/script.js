@@ -96,15 +96,15 @@ function efectoAlPasarElMouse() {
 }
 
 function inicializarRating() {
-    generaRating()
+    // generaRating()
     
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', generaRating)
     }
     
-    window.addEventListener('load', generaRating)
+    // window.addEventListener('load', generaRating)
     
-    setTimeout(generaRating, 300)
+    //setTimeout(generaRating, 300)
     
     window.addEventListener('popstate', generaRating)
     
