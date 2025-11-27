@@ -38,6 +38,16 @@ function validarCampos() {
   marcarCampo(email, emailCorrecto);
   marcarCampo(contrasenia, contraseniaCorrecta);
 
+  // mensaje de contraseña 
+      const msg = document.getElementById("mensaje-contrasenia");
+
+   if (!contraseniaCorrecta && contrasenia.value.trim() !== "") {
+    msg.textContent = "Debe tener entre 8 y 12 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 símbolo (#?!%$).";
+  } else {
+    msg.textContent = "";
+  }
+
+
   // Habilitar/deshabilitar botón
   boton.disabled = !(completos && emailCorrecto && contraseniaCorrecta);
 }

@@ -77,7 +77,13 @@ body{
 .enlace-recuperar-contrasenia:hover{ 
   text-decoration: underline 
 }
-
+#mensaje-contrasenia {
+  /* mensaje de error*/
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
 /* BOTÓN */
 .caja-boton{
    margin-bottom: 18px; 

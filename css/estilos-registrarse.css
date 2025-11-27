@@ -19,6 +19,14 @@
   font-weight: 600;
 }
 
+#mensaje-contrasenia {
+  /* mensaje de error*/
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
   /* RESPONSIVE: tablets y pantallas medianas */
 @media (max-width: 720px){
   .caja-registrarse{

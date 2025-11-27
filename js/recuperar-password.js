@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (validarEmail()) {
       // Si el email es válido, redirige al login
+      alert("Código de recuperación enviado"); 
       window.location.href = "login.html";
     } else {
       // Si no es válido, marcar el campo en rojo

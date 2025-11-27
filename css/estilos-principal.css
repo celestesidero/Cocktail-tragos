@@ -223,6 +223,11 @@
     top: -25px; /* MODIFICACIONES */
  }
 
+ .foot {
+    text-decoration: none;
+    color: #e0e0e0;
+ }
+
  #footer-principal-izquierda,
  #footer-principal-derecha:hover {
     cursor: pointer;
